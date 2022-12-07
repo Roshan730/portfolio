@@ -25,9 +25,7 @@ export const HeaderPhone = ({ menuOpen, setMenuOpen }) => {
 
 const NavContent = ({ setMenuOpen }) => (
   <>
-    <a href="#home">
-      <h2>Roshan Kumar Yadav</h2>
-    </a>
+    <h2>Roshan</h2>
     <div>
       <a onClick={() => setMenuOpen(false)} href="#home">
         Home
@@ -40,9 +38,6 @@ const NavContent = ({ setMenuOpen }) => (
       </a>
       <a onClick={() => setMenuOpen(false)} href="#services">
         Services
-      </a>
-      <a onClick={() => setMenuOpen(false)} href="#testimonial">
-        Testimonial
       </a>
       <a onClick={() => setMenuOpen(false)} href="#contact">
         Contact

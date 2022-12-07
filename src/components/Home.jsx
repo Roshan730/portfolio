@@ -1,26 +1,9 @@
-import React, { useRef } from "react";
-import { animate, motion } from "framer-motion";
+import React from "react";
+import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
 import { BsArrowUpRight, BsChevronDown } from "react-icons/bs";
-import logo from "../assets/logo.png";
 
 const Home = ({ ratio }) => {
-  const clientCount = useRef(null);
-  const projectCount = useRef(null);
-
-  const animationClientsCount = () => {
-    animate(0, 100, {
-      duration: 1,
-      onUpdate: (v) => (clientCount.current.textContent = v.toFixed()),
-    });
-  };
-  const animationProjectsCount = () => {
-    animate(0, 500, {
-      duration: 1,
-      onUpdate: (v) => (projectCount.current.textContent = v.toFixed()),
-    });
-  };
-
   const animations = {
     h1: {
       initial: {
@@ -43,13 +26,12 @@ const Home = ({ ratio }) => {
       },
     },
   };
-
   return (
     <div id="home">
       <section>
         <div>
-          <motion.h1 {...animationClientsCount.h1}>
-            Hi, I am <br /> Roshan Kumar Yadav
+          <motion.h1 {...animations.h1}>
+            Hi, I Am <br /> Roshan Kumar Yadav
           </motion.h1>
 
           <Typewriter
@@ -61,6 +43,7 @@ const Home = ({ ratio }) => {
               wrapperClassName: "typewriterpara",
             }}
           />
+
           <div>
             <a href="mailto:krishabh730@gmail.com">Hire Me</a>
             <a href="#work">
@@ -76,9 +59,7 @@ const Home = ({ ratio }) => {
           </aside>
         </div>
       </section>
-      <section>
-        <img src={logo} alt="Roshan" />
-      </section>
+      <section>{/* <img src="" alt="Roshan" /> */}</section>
       <BsChevronDown />
     </div>
   );
